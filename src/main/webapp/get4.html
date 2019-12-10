@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/get4?company=coderslab&learn=php&learn=java&learn=ruby&learn=python">
+    link
+</a>
+
+<form method="post" action="/get4">
+
+    <input type="text" name="company"/>
+    <select name="learn" multiple>
+        <option value="java">java</option>
+        <option value="php">php</option>
+        <option value="ruby">ruby</option>
+    </select><br/>
+    <input type="radio" name="payment" value="card" checked>Karta kredytowa
+    <input type="radio" name="payment" value="cash">Gotówka
+    <input type="radio" name="payment" value="transfer">Przelew
+<br/>
+    <input type="radio" name="payment3" value="card" checked>Karta kredytowa
+    <input type="radio" name="payment3" value="cash">Gotówka
+    <input type="radio" name="payment3" value="transfer">Przelew
+<br/>
+    <input type="checkbox" name="toppings" value="cheese">Dodatkowy ser
+    <input type="checkbox" name="toppings" value="ham">Dodatkowa szynka
+    <input type="checkbox" name="toppings" value="pineapple">Ananas
+    <input type="checkbox" name="toppings" value="tomato">Pomidor
+    <input type="checkbox" name="toppings" value="salami">Salami
+    <input type="submit"/>
+</form>
+</body>
+</html>
