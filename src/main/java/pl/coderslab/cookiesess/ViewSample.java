@@ -2,21 +2,25 @@ package pl.coderslab.cookiesess;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/setCookie")
-public class Cookie1Set extends HttpServlet {
+@WebServlet("/viewSample")
+public class ViewSample extends HttpServlet {
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie cookie = new Cookie("User", "CodersLab");
-        cookie.setMaxAge(60 * 60 * 24);
-        response.addCookie(cookie);
-        Cookie cookieFoo = new Cookie("foo", "bar");
-        cookieFoo.setMaxAge(60 * 60 * 24);
-        response.addCookie(cookieFoo);
+
+
+        Integer jajo = Integer.parseInt(request.getParameter("jajo"));
+
+        Integer jajoPower = jajo * jajo * jajo;
+
+        request.setAttribute("jajoPower", jajoPower);
+
+        getServletContext().getRequestDispatcher("/first.jsp")
+                .forward(request, response);
     }
 }
