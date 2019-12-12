@@ -28,6 +28,7 @@
             <td>${book.isbn}</td>
             <td>
                 <a href='<c:url value="/mvc15?isbn=${book.isbn}"></c:url> '>usuń</a>
+                <a href='<c:url value="/mvc16?isbn=${book.isbn}"></c:url> '>edit</a>
             </td>
         </tr>
     </c:forEach>
