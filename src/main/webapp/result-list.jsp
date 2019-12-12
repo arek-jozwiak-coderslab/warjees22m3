@@ -13,17 +13,22 @@
 </head>
 <body>
 <h1>Books</h1>
+<a href='<c:url value="/mvc13" />'>dodaj książkę</a>
 <table>
     <tr>
         <th>title</th>
         <th>author</th>
         <th>isbn</th>
+        <th>action</th>
     </tr>
     <c:forEach items="${books}" var="book">
         <tr>
             <td>${book.title}</td>
             <td>${book.author}</td>
             <td>${book.isbn}</td>
+            <td>
+                <a href='<c:url value="/mvc15?isbn=${book.isbn}"></c:url> '>usuń</a>
+            </td>
         </tr>
     </c:forEach>
 </table>
