@@ -11,10 +11,11 @@
     <title>Title</title>
 </head>
 <body>
+<h3>${message}</h3>
 <form action="/book/add" method="post">
 
     <input type="text" name="title"/>
-    <input type="text" name="author"/>
+    <input type="text" name="author" value="${book.author}"/>
     <input type="text" name="isbn"/>
     <input type="submit"/>
 </form>
